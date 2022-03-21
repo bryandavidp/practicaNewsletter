@@ -1,3 +1,85 @@
 /* ********* */
 /* @HOME */
 /* ********* */
+
+.contenedor {
+  width: 100%;
+  height: 100vh;
+  background: rgb(25, 107, 144);
+  background: linear-gradient(
+    180deg,
+    map-get($background, degradado1) 0%,
+    map-get($background, degradado2) 100%
+  );
+  padding: 1rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+
+  .texto {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    font-size: $letra__titulos;
+    color: map-get($colores, titulos);
+    width: $ancho__componentes;
+
+    h4{
+        font-size: $letra__titulos;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+  }
+
+  .suscribirse {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: $ancho__componentes;
+    border: 1px solid white;
+    border-radius: 10px;
+    font-size: $letra_inputs;
+    margin: 15px 0;
+  }
+}
+
+.suscribirse{
+    input{
+        width: 100%;
+        height: $altura__input;
+        border: none;
+        border-radius: 5px;
+        background: none;
+        color:map-get($colores, titulos);
+        font-size: $letra_inputs;
+        padding: 0 1rem;
+        margin: 0.5rem 0;
+        transition: all 0.3s ease;
+        &:focus{
+            outline: none;
+        }
+    }
+
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: map-get($colores, titulos);
+        font-weight: 100;
+        opacity: 0.8; /* Firefox */
+      }
+
+    button{
+        height: 3rem;
+        border: none;
+        border-radius: 5px;
+        background: none;
+        color: white;
+        font-size: $letra_inputs;
+        padding: 0 1rem;
+        transition: all 0.3s ease;
+        font-weight: bold;
+        &:hover{
+            cursor: pointer;
+            color: map-get($colores, hover);
+            transform: scale(1.1);
+        }
+    }
+}
